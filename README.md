@@ -1,3 +1,1 @@
 ## DELIVERY PROJECT for and from SAN JUAN
-
-gNAh7iYKmAOqlPaM
