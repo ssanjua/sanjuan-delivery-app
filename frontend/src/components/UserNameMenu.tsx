@@ -10,7 +10,6 @@ import { CircleUserRound } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
-
 const UserNameMenu = () => {
     const { user, logout } = useAuth0();
   return (
@@ -26,6 +25,14 @@ const UserNameMenu = () => {
                 className="font-bold hover:text-orange-500"
                 >
                     Tu perfil
+                </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+                <Link 
+                to="/manage-restaurant" 
+                className="font-bold hover:text-orange-500"
+                >
+                    Tu restaurant
                 </Link>
             </DropdownMenuItem>
             <Separator />

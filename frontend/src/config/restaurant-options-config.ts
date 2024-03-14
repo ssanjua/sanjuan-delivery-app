@@ -1,0 +1,17 @@
+export const cuisineList = [
+    "Empanadas",
+    "Hamburguesas",
+    "Pachatas",
+    "Lomos",
+    "Piadinas",
+    "Hamguerguesas",
+    "Desayuno",
+    "Picadas",
+    "Milanesas",
+    "Pastas",
+    "Pizza",
+    "Sushi",
+    "Venezolana",
+    "Panadería",
+    "Tacos",
+]
