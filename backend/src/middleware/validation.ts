@@ -49,15 +49,18 @@ export const validateMyRestaurantRequest = [
     body("deliveryPrice")
         .isInt({min: 0})
         .withMessage("El tiempo estimado debe ser mayor a cero"),
-    body("deliveryPrice")
-        .isArray()
-        .withMessage("Debe ser un array")
-        .not()
-        .isEmpty()
-        .withMessage("El array no puede estar vacío"),
+    body("estimatedDeliveryTime")
+        .isInt({ min: 0 })
+        .withMessage("El tiempo estimado debe ser mayor a 0"),
     body("menuItems")
         .isArray()
         .withMessage("Debe ser un array"),
+        body("cuisines")
+        .isArray()
+        .withMessage("Cuisines must be an array")
+        .not()
+        .isEmpty()
+        .withMessage("Cuisines array cannot be empty"),
     body("menuItems.*.name")
         .notEmpty()
         .withMessage("El item del menú es obligatorio"),
