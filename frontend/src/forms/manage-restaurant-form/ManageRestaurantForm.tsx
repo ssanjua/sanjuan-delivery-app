@@ -38,7 +38,12 @@ const formSchema = z.object({
             price: z.coerce.number().min(1, "el precio es obligatorio")
         })
     ),
-    imageFile: z.instanceof(File, {message: "la imagen es obligatoria"})
+    imageUrl: z.string().optional(),
+    imageFile: z.instanceof(File, {message: "la imagen es obligatoria"}).optional(),
+
+}).refine((data) => data.imageUrl || data.imageFile, {
+    message: "debes elegir una imagen o URL",
+    path: ["imageFile"],
 })
 
 type RestaurantFormData = z.infer<typeof formSchema>
