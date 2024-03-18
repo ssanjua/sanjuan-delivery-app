@@ -72,7 +72,6 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
             </FormItem>
           )}
         />
-
         <Button
           onClick={handleReset}
           type="button"
