@@ -55,6 +55,7 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
                 <span>Total</span>
                 <span>${getTotalCost()}</span>
             </CardTitle>
+            <Separator />
         </CardContent>
     </>
   )
