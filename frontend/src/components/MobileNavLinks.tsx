@@ -8,7 +8,7 @@ const MobileNavLinks = () => {
     <>
         <Link 
         to="/user-profile"
-        className="flex bg-white items-center font0bold hover:text-orange-500"
+        className="flex bg-white items-center font0bold hover:text-red-500"
         >
             Tu perfil    
         </Link>

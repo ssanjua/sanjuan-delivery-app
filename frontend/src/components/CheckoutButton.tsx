@@ -34,7 +34,7 @@ const CheckoutButton = ({ onCheckout, disabled }: Props ) => {
         return ( 
             <Button 
                 onClick={onLogin} 
-                className="bg-orange-500 flex-1"
+                className="bg-red-500 flex-1"
                 >
                     Iniciá sesión para pedir
             </Button>
@@ -48,7 +48,7 @@ const CheckoutButton = ({ onCheckout, disabled }: Props ) => {
     return (
         <Dialog>
              <DialogTrigger asChild>
-                <Button disabled={disabled} className="bg-orange-500 flex-1">
+                <Button disabled={disabled} className="bg-red-500 flex-1">
                     Hacer pedido
                 </Button>
              </DialogTrigger>
