@@ -1,8 +1,18 @@
 import express from "express";
 import { param } from "express-validator";
-import MyRestaurantController from "../controllers/RestaurantController";
+import RestaurantController from "../controllers/RestaurantController";
 
 const router = express.Router()
+
+router.get(
+    "/:restaurantId",
+    param("restauranId")
+    .isString()
+    .trim()
+    .notEmpty()
+    .withMessage("el restaurant debe ser string"),
+    RestaurantController.getRestaurant
+)
 
 // /api/restaurant/search/rivadavia
 router.get(
@@ -12,7 +22,7 @@ router.get(
     .trim()
     .notEmpty()
     .withMessage("la Localidad debe ser string"),
-    MyRestaurantController.searchRestaurant
+    RestaurantController.searchRestaurant
 )
 
 export default router
