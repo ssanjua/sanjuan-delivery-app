@@ -2,6 +2,7 @@ import landingImage from "../assets/landing.png";
 import appDownloadImage from "../assets/appDownload.png";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
+import FeaturesCard from "@/components/FeaturesCard";
 
 const HomePage = () => {
     const navigate = useNavigate()
@@ -13,9 +14,9 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col gap-12">
-      <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
+      <div className="px-4 sm:px-8 md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-20">
         <h1 className="text-5xl font-bold tracking-tight text-red-600">
-          Buscá lo que quieras cerca de casa!
+          Vamos donde estés!
         </h1>
         <span className="text-xl">Estás a un click de la felicidad!</span>
         <SearchBar
@@ -35,6 +36,7 @@ const HomePage = () => {
           <img src={appDownloadImage} />
         </div>
       </div>
+      <FeaturesCard />
     </div>
   );
 };

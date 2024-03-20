@@ -10,7 +10,7 @@ const MainNav = () => {
     <span className="flex space-x-2 items-center">
         {  isAuthenticated ? ( 
             <>
-                <Link to="/order-status" className="hover-text-red-500">
+                <Link to="/order-status" className="text-white hover-text-white">
                     Estado de pedido
                 </Link>
                 <UserNameMenu /> 
@@ -19,7 +19,7 @@ const MainNav = () => {
         ) : (            
             <Button 
             variant="ghost" 
-            className="font-bold hover:text-red-500 hover-bg-white"
+            className="bg-white font-bold hover:text-red-500"
             onClick={async () => await loginWithRedirect()}
         >
             Iniciar sesión
