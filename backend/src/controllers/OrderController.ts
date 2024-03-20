@@ -7,6 +7,19 @@ const STRIPE = new Stripe(process.env.STRIPE_API_KEY as string)
 const FRONTEND_URL = process.env.FRONTEND_URL as string
 const STRIPE_ENDPOINT_SECRET= process.env.STRIPE_WEBHOOK_SECRET as string
 
+const getMyOrders = async (req: Request, res: Response) => {
+  try {
+    const orders = await Order.find({ user: req.userId })
+      .populate("restaurant")
+      .populate("user")
+
+    res.json(orders)
+  } catch(error) {
+    console.log(error)
+    res.status(500).json({ message: "algo asalió mal "})
+  }
+}
+
 type CheckoutSessionRequest = {
     cartItems: {
       menuItemId: string;
@@ -80,7 +93,7 @@ const createCheckoutSession = async (req: Request, res: Response) => {
           restaurant.menuItems
         );
 
-        const session = await cerateSession(
+        const session = await createSession(
             lineItems, 
             newOrder._id.toString(), 
             restaurant.deliveryPrice, 
@@ -129,7 +142,7 @@ const createLineItems = (
     return lineItems
 };
 
-const cerateSession = async (
+const createSession = async (
     lineItems: Stripe.Checkout.SessionCreateParams.LineItem[],
     orderId: string,
     deliveryPrice: number,
@@ -154,7 +167,7 @@ const cerateSession = async (
                 orderId,
                 restauranId,
             },
-            success_url: `${FRONTEND_URL}/order-status?success=true}`,
+            success_url: `${FRONTEND_URL}/order-status?success=true`,
             cancel_url: `${FRONTEND_URL}/detail/${restauranId}?cancelled=true`,
         })
 
@@ -164,4 +177,5 @@ const cerateSession = async (
 export default {
     createCheckoutSession,
     stripeWebhookHandler,
+    getMyOrders,
 }
