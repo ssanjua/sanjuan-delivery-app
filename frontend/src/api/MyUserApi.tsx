@@ -20,7 +20,7 @@ export const useGetMyUser = () => {
         })
 
         if(!response.ok) {
-            throw new Error("no se pudo traer el usuario")
+            throw new Error("No se pudo traer el usuario")
         }
 
         return response.json()
@@ -59,7 +59,7 @@ export const useCreateMyUser = () => {
         });
 
         if(!response.ok) {
-            throw new Error("falla al crear usuario")
+            throw new Error("Falla al crear usuario")
         }
     };
 

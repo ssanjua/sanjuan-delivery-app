@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 import { Request, Response } from "express"
 import Restaurant, { MenuItemType } from "../models/restaurant";
-import Order from "../models/orders";
+import Order from "../models/order";
 
 const STRIPE = new Stripe(process.env.STRIPE_API_KEY as string)
 const FRONTEND_URL = process.env.FRONTEND_URL as string
@@ -16,7 +16,7 @@ const getMyOrders = async (req: Request, res: Response) => {
     res.json(orders)
   } catch(error) {
     console.log(error)
-    res.status(500).json({ message: "algo asalió mal "})
+    res.status(500).json({ message: "algo salio mal"})
   }
 }
 

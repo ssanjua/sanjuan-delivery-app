@@ -11,7 +11,7 @@ const getCurrentUser = async (req: Request, res: Response) => {
         res.json(currentUser)
     } catch (error) {
         console.log(error)
-        return res.status(500).json({ message: "algo saliò mal" })
+        return res.status(500).json({ message: "algo salio mal" })
     }
 }
 
@@ -53,7 +53,7 @@ const updateCurrentUser = async (req: Request, res: Response) => {
         res.send(user)
     } catch (error) {
         console.log(error)
-        res.status(500).json({ message: "error update user"})
+        res.status(500).json({ message: "error al actualiazr el usuario"})
     }
 }
 
