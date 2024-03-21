@@ -35,6 +35,6 @@ app.use("/api/my/restaurant", myRestaurantRoute);
 app.use("/api/restaurant", restaurantRoute);
 app.use("/api/order", orderRoute);
 
-app.listen(7000, () => {
+app.listen(3000, () => {
   console.log("server started on localhost:3000");
 });
