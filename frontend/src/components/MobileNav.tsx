@@ -22,7 +22,7 @@ const MobileNav = () => {
                 </span>  
                 ) : (
                 <span>
-                    Bienvenidos sanjuanmaster
+                    Bienvenidos! Quién anda ahí?
                 </span>
                 )}                
             </SheetTitle>
