@@ -10,6 +10,8 @@ Este proyecto fullstack es una web de delivery local enfocada en la simplicidad 
 
 ## Demo
 
+![Demo](video/demo.gif)
+
 Podés loguearte con tu cuenta de google o usar:
 - usuario: **test@sanjuan.com**
 - pass: **Test1234-**
