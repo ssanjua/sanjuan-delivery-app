@@ -2,6 +2,8 @@
 
 Este proyecto fullstack es una web de delivery local enfocada en la simplicidad y eficiencia, destinada a pequeños negocios de comida en ciudades pequeñas. Incorporando autenticación de usuarios, validación, rutas seguras y Stripe para pagos.
 
+![screenshot](/video/yarco-feed.webp)
+
 ## Funcionalidades
 
 :small_orange_diamond: Para usuarios: Posibilidad de pedir comida, buscar restaurantes por localidad, precio y tipo de comida.
@@ -19,8 +21,6 @@ Podés loguearte con tu cuenta de google o usar:
 Para hacer un pago podes usar las tarjetas de prueba de: [docs.stripe.com
 ](https://docs.stripe.com/testing#international-cards)
 
-![Demo](url-a-tu-gif-demo.gif)
-
 
 ```
 Argentina (AR)	4000000320000021	Visa
@@ -36,12 +36,12 @@ Spain (ES)	4000007240000007	Visa
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+
+![phone](/video/yarco_phone.webp)
+
 ## Despliegue
 
-
 El proyecto está desplegado en [Render](https://render.com). Puedes acceder a la aplicación en vivo [aquí](https://sanjuan-delivery-app-frontend.onrender.com/).
-
-IMAGEN
 
 ## Uso Local
 
